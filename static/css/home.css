@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --var-font:'Cairo', sans-serif;
+    --color:#A5F1E9;
+    --text-color:#707070;
+}
+
+
+
+
+.up {
+    width: 100%;
+    height: 50vh;
+    background-color: var(--color);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.up .l, .up .r{
+    width: 50%;
+    height: 100%;
+}
+
+
+.r {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 5rem;
+    justify-content: center;
+}
+
+
+.r h1 {
+    font-size: 4rem;
+    font-family: var(--var-font);
+    color: var(--text-color);
+}
+
+
+.r p {
+    font-family: var(--var-font);
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+
+.l {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.l img {
+    width: 50%;
+    height: auto;
+}
+
+
+
+.up .down {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+}
+
+
+.scroll {
+    position: relative;
+    width: 30px;
+    height: 60px;
+    border-radius: 30px;
+    border: 3px solid var(--color);
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    animation: Dot 1s infinite alternate;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color);
+}
+
+@keyframes Dot {
+    from {
+        padding-top: 5px;
+    }
+    to{
+        padding-top: 40px ;
+    }
+}
+
+
+
+
+.in {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.in input {
+    font-family: var(--var-font);
+    padding: 1rem;
+    width: 550px;
+    border-radius: 30px;
+    border: none;
+    direction: rtl;
+    background-color: #a5f1e93c;
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0px 0px 12px #a5f1e932;
+}
+
+
+.catgs{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.catgs form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    padding: 1rem;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+}
+.catgs input {
+    padding: 1rem;
+    font-family: var(--var-font);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: var(--color);
+    color: var(--text-color);
+    margin: 7px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.catgs input.active, .catgs input:hover{
+    background-color: #00FFE4;
+    box-shadow: 0px 1px 12px #00FFE4;
+}
+
+
+.games {
+    position: relative;
+    width: 100%;
+    margin-top: 60px;
+    height: auto;
+    padding: 1rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+.game .name {
+    font-size: 20px;
+    width: 100%;
+    color: var(--text-color);
+    font-family: sans-serif;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #00FFE4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    font-size: 19px;
+    flex-wrap: wrap;
+}
+
+.game img {
+    border-radius: 8px;
+}

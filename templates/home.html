@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر التطبيقات</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    
+    <div class="up">
+
+        
+        
+        <div class="l">
+            <img src="{% static 'imgs/3d-fluency-game-controller.png' %}" alt="">
+        </div>
+        
+        
+        <div class="r">
+
+            <h1>متجر الاعب المحترف</h1>
+            <p>منصة تجمع جميع الألعاب للهواتف الذكية</p>
+            <p>هل انت جاهز لتنزيل احدث الألعاب ؟</p>
+        
+        </div>
+
+
+        <div class="down">
+            <div class="scroll">
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="in">
+        <form method="get">
+            <input type="text" name="q" placeholder="..بحث">
+        </form>
+    </div>
+
+    <div class="catgs">
+
+        <form method="GET">
+            <input type="submit"  name="type" value="الكل">
+            
+            {% for catg in catgs %}
+                <input type="submit" name="type" value="{{catg}}">
+            {% endfor %}
+
+        </form>
+
+    </div>
+
+
+    <div class="games">
+        
+        
+        {% for game in games %}
+            <a href="{% url 'game' game.id %}" class="game">
+                <img src="{{ game.main_image }}" alt="">
+                <div class="name">{{ game.name }}</div>
+            </a>
+        {% endfor %}
+
+        
+    </div>
+</body>
+</html>

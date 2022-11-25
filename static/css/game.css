@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --var-font:'Cairo', sans-serif;
+    --color:#A5F1E9;
+    --text-color:#707070;
+}
+
+
+.up {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.up img {
+    border-radius: 12px;
+}
+
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.info .box {
+    padding: 3rem;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.045);
+    width: 280px;
+    border-radius: 12px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+.box small {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-family: var(--var-font);
+    color: #c6c6c6;
+    font-size: 0.9rem;
+}
+
+.box p {
+    font-family: sans-serif;
+    font-size: 1.3rem;
+    color: var(--color);
+}
+
+.images {
+    position: relative;
+    width: 80%;
+    height: 250px ;
+    margin: 30px auto ;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.images img {
+    width: auto;
+    height: 100%;
+}
+
+
+.download {
+    position: relative;
+    width: 50%;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-family: var(--var-font);
+    background-color: #00FFE4;
+    box-shadow: 0px 3px 12px #A5F1E9;
+    padding: 2rem;
+    border-radius: 50px;
+    margin: 10px auto;
+    font-size: 2rem;
+    text-align: center;
+}

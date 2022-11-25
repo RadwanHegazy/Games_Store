@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Suface</title>
+    <link rel="stylesheet" href="{% static 'css/game.css' %}">
+</head>
+<body>
+    
+    <div class="up">
+        <img src="{{game.main_image}}" alt="">
+    </div>
+
+
+
+    <div class="info">
+        
+        <div class="box">
+            <small>حجم اللعبة</small>
+            <p>{{ game.size }}</p>
+        </div>
+
+        <div class="box">
+            <small>نظام التشغيل</small>
+            <p>{{ game.os }}</p>
+        </div>
+
+        <div class="box">
+            <small>اسم اللعبة</small>
+            <p>{{ game.name }}</p>
+        </div>
+
+
+    </div>
+
+
+    <div class="images">
+
+        
+
+    </div>
+
+
+
+    <a href="{{ game.download_link }}" class="download">تحميل اللعبة</a>
+
+
+    <script>
+        var images = "{{ game.all_photos }} ".split('*');
+
+        images.forEach( img => {
+            
+            document.querySelector('.images').innerHTML += `<img src="${img}" alt="">`;
+        })
+    </script>
+</body>
+</html>
